@@ -4,6 +4,7 @@ const createBox = (type) => {
 
   switch (type) {
     default:
+      boxElement.classList.add('box--default');
       return boxElement;
 
     case 'add-point':

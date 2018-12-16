@@ -6,6 +6,8 @@ import {
   finishGame,
 } from '../../store/actions';
 
+import { removeBoxes, renderBoxes } from '../BoxList';
+
 import * as constants from '../../constants';
 
 const timeline = document.getElementById('timeline');
@@ -13,8 +15,12 @@ let countdown;
 
 export const setTimelineToStart = () => {
   timeline.innerHTML = `${constants.fullGameTime} sec`;
+
   timeline.classList.remove('bg-danger');
+  timeline.classList.remove('bg-info');
+  timeline.classList.remove('bg-warning');
   timeline.classList.add('bg-success');
+
   timeline.style.width = '100%';
 };
 
@@ -30,6 +36,7 @@ export const stopTimeline = (type) => {
     dispatch(() => pauseGame());
   } else {
     dispatch(() => finishGame());
+    removeBoxes();
   }
 };
 
@@ -83,6 +90,7 @@ export const startTimeline = () => {
 
     case constants.GAME_FINISHED:
       dispatch(() => startGame(constants.fullGameTime));
+      renderBoxes(50);
       break;
   }
 

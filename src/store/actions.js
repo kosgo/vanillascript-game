@@ -23,12 +23,12 @@ export const removeTime = payload => ({
   payload,
 });
 
-export const addPoints = payload => ({
+export const addPoint = payload => ({
   type: types.ADD_POINT,
   payload,
 });
 
-export const removePoints = payload => ({
+export const removePoint = payload => ({
   type: types.REMOVE_POINT,
   payload,
 });

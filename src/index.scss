@@ -1,0 +1,140 @@
+.jumbotron {
+    height: 100vh;
+}
+
+.modal-window {
+    width: 1200px;
+    height: 660px;
+    position: absolute;
+    left: calc(50% - 600px);
+    top: calc(50% - 330px);
+    padding: 15px;
+    z-index: 100;
+    border: 1px solid #000;
+    background: #fff;
+    box-shadow: 3px 3px 7px #ccc;
+    border-radius: 5px;
+    transition: all .6s;
+    opacity: 1;
+}
+
+.modal--hidden {
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.field {
+    margin: 10px auto;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-radius: 5px;
+}
+
+.box {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background: #e2e3e5;
+    border: 1px solid #d6d8db;
+    transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--add-point {
+        background: #28a745;
+        border: 1px solid darken(#28a745, 5%);
+        cursor: pointer;
+
+        &:hover {
+            background: lighten(#28a745, 5%);
+            border: 1px solid #28a745;
+        }
+
+        &::before {
+            content: '\f055';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 40px;
+            color: darken(#28a745, 10%);
+        }
+    }
+
+    &--remove-point {
+        background: #dc3545;
+        border: 1px solid darken(#dc3545, 5%);
+        cursor: pointer;
+
+        &:hover {
+            background: lighten(#dc3545, 5%);
+            border: 1px solid #dc3545;
+        }
+
+        &::before {
+            content: '\f056';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 40px;
+            color: darken(#dc3545, 10%);
+        }
+    }
+
+    &--add-time {
+        background: #17a2b8;
+        border: 1px solid darken(#17a2b8, 5%);
+        cursor: pointer;
+
+        &:hover {
+            background: lighten(#17a2b8, 5%);
+            border: 1px solid #17a2b8;
+        }
+
+        &::before {
+            content: '\f2f2';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 40px;
+            color: darken(#17a2b8, 10%);
+        }
+    }
+
+    &--remove-time {
+        background: #ffc107;
+        border: 1px solid darken(#ffc107, 5%);
+        cursor: pointer;
+
+        &:hover {
+            background: lighten(#ffc107, 5%);
+            border: 1px solid #ffc107;
+        }
+
+        &::before {
+            content: '\f273';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 40px;
+            color: darken(#ffc107, 10%);
+        }
+    }
+
+    &--shuffle {
+        background: #343a40;
+        border: 1px solid black;
+        cursor: pointer;
+
+        &:hover {
+            background: lignten(#343a40, 5%);
+            border: 1px solid #343a40;
+        }
+        
+    }
+}
